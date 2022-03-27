@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: wb-db
+    networks:
+      - wb-net
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: wordle_bundle
+      POSTGRES_USER: wb_user
+      POSTGRES_PASSWORD: rootpass
+
+networks:
+  wb-net:

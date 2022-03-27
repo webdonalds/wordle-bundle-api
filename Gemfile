@@ -5,6 +5,7 @@ ruby "3.1.1"
 
 # Rails
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
+gem "graphql", "~> 2.0"
 
 # Drivers
 gem "pg", "~> 1.1"
