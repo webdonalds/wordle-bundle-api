@@ -1,24 +1,9 @@
-# README
+# Wordle Bundle API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> GraphQL APIs for [Wordle Bundle](https://wb.webdonalds.org) service.
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby 3.1
