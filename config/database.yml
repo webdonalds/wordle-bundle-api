@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: wordle_bundle
+  username: wb_user
+  password: rootpass  # Don't mind. Just only for local development :)
+  host: 127.0.0.1
+  port: 5432
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  database: wordle_bundle
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+  host: <%= ENV["DATABASE_HOST"] %>
+  port: <%= ENV["DATABASE_PORT"] %>
