@@ -20,9 +20,8 @@ describe ApiToken do
     end
 
     it "should have valid expiration time" do
-      puts subject.access_key
-      expect(subject.expire_at)
-        .to be >= (Time.now + ApiToken::ACCESS_KEY_VALID_DAYS.days)
+      expect(subject.expire_at.round)
+        .to be >= (Time.now + ApiToken::ACCESS_KEY_VALID_DAYS.days).round
     end
   end
 end
