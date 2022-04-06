@@ -10,7 +10,7 @@ module UserAuthentications
     end
 
     def self.client_id
-      @client_id ||= ENV["GOOGLE_CLIENT_ID"]
+      @client_id ||= Figaro.env.GOOGLE_CLIENT_ID
     end
   end
 end

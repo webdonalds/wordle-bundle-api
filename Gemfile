@@ -18,15 +18,18 @@ gem "rack-cors", "~> 1.1"
 gem "google-id-token", "~> 1.4"
 
 # Ruby extensions
+gem "figaro"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :test do
   gem "rspec"
   gem "rspec-mocks"
   gem "rspec-rails"
-  gem "faker"
+  gem "timecop"
 end
