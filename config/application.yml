@@ -1,0 +1,4 @@
+# Override these configs with environment variables on production.
+
+SERVER_SECRET_KEY: dummy
+GOOGLE_CLIENT_ID: dummy
