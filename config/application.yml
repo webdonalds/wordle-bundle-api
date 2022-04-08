@@ -1,4 +1,8 @@
 # Override these configs with environment variables on production.
 
+SECRET_KEY_BASE: dummy
+
+SERVER_HOST: 127.0.0.1
 SERVER_SECRET_KEY: dummy
+
 GOOGLE_CLIENT_ID: dummy
