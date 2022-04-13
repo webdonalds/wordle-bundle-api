@@ -6,4 +6,4 @@
 
 ### Prerequisites
 
-- Ruby 3.1
+- Ruby 3.1.2
