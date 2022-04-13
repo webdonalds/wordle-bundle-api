@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_27_142910) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_13_142204) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_27_142910) do
     t.index ["access_key"], name: "index_api_tokens_on_access_key", unique: true
     t.index ["refresh_key"], name: "index_api_tokens_on_refresh_key", unique: true
     t.index ["user_id"], name: "index_api_tokens_on_user_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "uuid", null: false
+    t.string "type"
+    t.bigint "user_id"
+    t.text "raw_result"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_games_on_type"
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "user_authentications", force: :cascade do |t|
